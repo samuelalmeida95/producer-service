@@ -2,11 +2,15 @@ plugins {
     id 'org.springframework.boot' version '2.7.5'
     id 'io.spring.dependency-management' version '1.0.15.RELEASE'
     id 'java'
+    id 'maven-publish'
 }
 
 group = 'br.samuel'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
+
+group = 'org.rabbitmq'
+version = '1.0.0'
 
 configurations {
     compileOnly {
@@ -15,13 +19,16 @@ configurations {
 }
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-amqp'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.rabbitmq:commons:1.0-SNAPSHOT'
+    implementation 'org.springframework.boot:spring-boot-starter-amqp'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.rabbitmq:commons:1.0.0'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
