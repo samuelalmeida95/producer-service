@@ -1,6 +1,8 @@
 package br.samuel.producerservice.services;
 
 import static br.samuel.producerservice.configs.RabbitMQConfig.*;
+import static constants.RabbitMQConstants.EXG_NAME_MARKETPLACE;
+import static constants.RabbitMQConstants.RK_PRODUCT_LOG;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
